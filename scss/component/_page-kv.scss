@@ -1,0 +1,69 @@
+@use "../global" as g;
+
+.c-page-kv {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-primary);
+  // margin-inline: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include g.mq(){
+    height: 460px;
+  }
+
+  &--error{
+    background-image: url(../img/page-kv-error-sp.jpg);
+
+    @include g.mq(){
+    background-image: url(../img/page-kv-error.jpg);
+    }
+  }
+
+  &--blog{
+    background-image: url(../img/page-kv-blog-sp.jpg);
+
+    @include g.mq(){
+      background-image: url(../img/page-kv-blog.jpg);
+      }
+  }
+
+  &--concept{
+    background-image: url(../img/page-kv-concept-sp.jpg);
+
+    @include g.mq(){
+      background-image: url(../img/page-kv-concept.jpg);
+      }
+  }
+
+  &--menu{
+    background-image: url(../img/page-kv-menu-sp.jpg);
+
+    @include g.mq(){
+      background-image: url(../img/page-kv-menu.jpg);
+      }
+  }
+
+  &--shoplist{
+    background-image: url(../img/page-kv-shoplist-sp.jpg);
+
+    @include g.mq(){
+      background-image: url(../img/page-kv-shoplist.jpg);
+      }
+  }
+}
+
+.c-page-kv-title {
+  font-family: var(--font-family-english);
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--color-bg-white);
+
+  @include g.mq(){
+    font-size: 36px;
+  }
+}

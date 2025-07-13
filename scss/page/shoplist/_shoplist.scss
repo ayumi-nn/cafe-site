@@ -1,0 +1,81 @@
+@use "../../global" as g;
+
+/*!
+page > shop list > shop list
+------------------------------
+*/
+
+.shoplist-container {
+  @include g.mq(xl) {
+    max-width: 1101px;
+  }
+}
+
+.shoplist-list {
+  display: grid;
+  gap: 40px;
+
+  @include g.mq() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include g.mq(xl) {
+    gap: 48px 91px;
+  }
+}
+
+.shoplist-shop-image {
+  aspect-ratio: 324/205;
+  object-fit: cover;
+  flex: 1;
+
+  @include g.mq(xl) {
+    max-width: 285px;
+  }
+}
+
+.shoplist-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: fit-content;
+
+  @include g.mq(xl) {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.shoplist-about-wrap {
+  display: grid;
+  gap: 4px;
+  flex-shrink: 0;
+  flex: 1;
+}
+
+.shoplist-about {
+  font-family: var(--font-family-base);
+  line-height: 1.55;
+  font-size: 12px;
+
+  @include g.mq() {
+    font-size: 14px;
+  }
+
+  &--location {
+    font-size: 16px;
+
+    @include g.mq() {
+      font-size: 20px;
+    }
+  }
+
+  &--tel {
+    font-family: var(--font-family-english);
+    font-size: 18px;
+
+    @include g.mq() {
+      font-size: 22px;
+    }
+  }
+}

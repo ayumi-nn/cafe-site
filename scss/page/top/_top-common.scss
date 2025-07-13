@@ -1,0 +1,22 @@
+@use "../../global" as g;
+
+/*!
+page > top > concept
+------------------------------
+*/
+
+.top-image-separate {
+  background-image: url(../img/bg-top-separate1-sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 170px;
+  aspect-ratio: 360/170;
+
+  @include g.mq() {
+    background-image: url(../img/bg-top-separate1.jpg);
+    height: 370px;
+    aspect-ratio: 1366/370;
+  }
+}

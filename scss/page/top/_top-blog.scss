@@ -1,0 +1,26 @@
+@use "../../global" as g;
+
+/*!
+page > top > blog & news
+------------------------------
+*/
+
+.top-blog-body {
+  margin: 40px 0;
+  display: grid;
+  gap: 40px;
+
+  @include g.mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @include g.mq() {
+    margin: 48px 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include g.mq(lg) {
+    gap: 48px 30px;
+  }
+}

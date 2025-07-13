@@ -1,0 +1,31 @@
+@use "../../global" as g;
+
+/*!
+page > concept > concept
+------------------------------
+*/
+
+.concept-container {
+  display: grid;
+  gap: 40px;
+
+  @include g.mq() {
+    gap: 48px;
+  }
+}
+
+.concept-text-wrap {
+  display: grid;
+  gap: 24px;
+  text-align: center;
+
+  @include g.mq() {
+    gap: 32px;
+  }
+}
+
+.concept-text span {
+  @include g.mq() {
+    display: block;
+  }
+}

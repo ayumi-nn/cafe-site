@@ -1,0 +1,75 @@
+@use "../../global" as g;
+
+/*!
+page > menu > menu
+------------------------------
+*/
+
+.menu-container {
+  display: grid;
+  gap: 40px;
+
+  @include g.mq() {
+    gap: 48px;
+  }
+}
+
+.menu-text-wrap {
+  text-align: center;
+}
+
+.menu-top-text {
+  margin-bottom: 24px;
+}
+
+.menu-text span{
+  display: block;
+}
+
+.menu-coffee {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include g.mq() {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+.menu-coffee-image {
+  @include g.mq() {
+    max-width: 280px;
+  }
+}
+
+.menu-coffee-text-name {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  line-height: 1;
+
+  @include g.mq() {
+    font-size: 20px;
+  }
+}
+
+.menu-coffee-text-price {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 12px;
+
+  @include g.mq() {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+}
+
+.menu-coffee-text {
+  margin-top: 12px;
+
+  @include g.mq() {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+/*!
+component > archive post
+------------------------------
+*/
+
+
+.c-archive-post-date{
+  font-family: var(--font-family-english);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+
+  @include g.mq(){
+    font-size: 14px;
+  }
+}
+
+.c-archive-post-title{
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  line-height: 1.55;
+
+  @include g.mq(){
+    font-size: 22px;
+  }
+}
+
+.c-archive-post-info{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include g.mq(){
+    margin-top: 20px;
+  }
+}

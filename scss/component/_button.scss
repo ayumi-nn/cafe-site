@@ -1,0 +1,69 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+  font-family: var(--font-family-english);
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  padding: 18px 0;
+  position: relative;
+
+  @include g.mq() {
+    font-size: 18px;
+    padding: 21px 0;
+  }
+
+  &--size-medium {
+    width: 100%;
+    max-width: 220px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include g.mq() {
+      max-width: 240px;
+      height: 60px;
+    }
+  }
+
+  &--black{
+    background-color: var(--color-bg-black);
+    color: var(--color-font-white);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 1px;
+      background-color: var(--color-bg-white);
+      position: absolute;
+      right: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  &--white{
+    background-color: var(--color-bg-white);
+    color: var(--color-font-base);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 1px;
+      background-color: var(--color-bg-black);
+      position: absolute;
+      right: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+}

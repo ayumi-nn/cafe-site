@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+/*!
+page > top > shop list
+------------------------------
+*/
+
+.top-shoplist-text-wrap {
+  margin-top: 40px;
+  text-align: center;
+
+  @include g.mq() {
+    margin-top: 48px;
+  }
+}
+
+.top-shoplist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 14px;
+  margin: 40px auto;
+  width: fit-content;
+
+  @include g.mq(sm) {
+    grid-template-columns: repeat(3, minmax(auto, 230px));
+  }
+
+  @include g.mq() {
+    margin: 48px auto;
+    gap: 24px;
+  }
+}
+
+.top-syoplist-item {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  line-height: 1;
+  background-color: var(--color-bg-secondary);
+  border-radius: 100px;
+  padding: 15px 49px;
+  text-align: center;
+
+  @include g.mq(sm) {
+    padding: 19px 0;
+  }
+
+  @include g.mq() {
+    font-size: 16px;
+  }
+}

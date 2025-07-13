@@ -1,0 +1,46 @@
+@use "../../global" as g;
+
+/*!
+page > blog > single page
+------------------------------
+*/
+
+.blog-single-date{
+  font-size: 12px;
+  line-height: 1;
+  font-family: var(--font-family-english);
+  letter-spacing: 0.08em;
+
+  @include g.mq(){
+    font-size: 14px;
+  }
+}
+
+.blog-single-title{
+  font-family: var(--font-family-base);
+  font-size: 22px;
+  line-height: 1.55;
+  margin-top: 4px;
+
+  @include g.mq(){
+    font-size: 26px;
+  }
+}
+
+.blog-single-info{
+  margin: 16px 0 40px;
+
+  @include g.mq(){
+    margin: 24px 0 48px;
+  }
+}
+
+.blog-single-text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include g.mq(){
+    gap: 40px;
+  }
+}

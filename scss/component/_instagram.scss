@@ -1,0 +1,48 @@
+@use "../global" as g;
+
+.c-instagram-container {
+  background-color: var(--color-bg-secondary);
+}
+
+.c-instagram-wrap {
+  margin-inline: auto;
+  max-width: 1366px;
+}
+
+.c-instagram-title {
+  font-family: var(--font-family-english);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  margin-left: -0.08em;
+  text-align: center;
+
+  @include g.mq() {
+    font-size: 32px;
+  }
+}
+
+.c-instagram-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 9px;
+  margin-top: 40px;
+
+  @include g.mq() {
+    margin-top: 48px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include g.mq(lg) {
+    gap: 32px;
+  }
+}
+
+.c-instagram-button {
+  margin-top: 40px;
+
+  @include g.mq() {
+    margin-top: 48px;
+  }
+}

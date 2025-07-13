@@ -1,0 +1,81 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+.footer {
+  background-color: var(--color-bg-primary);
+  padding: 64px 0 16px;
+
+  @include g.mq(){
+    padding: 80px 0 24px;
+  }
+}
+
+.footer-container{
+  width: 90%;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+}
+
+.footer-logo {
+  width: 120px;
+  height: 15px;
+
+  @include g.mq() {
+    width: 200px;
+    height: 26px;
+  }
+
+  img{
+    display: block;
+  }
+}
+
+.footer-shop-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+
+  @include g.mq(){
+    margin-top: 40px;
+  }
+}
+
+.footer-shop {
+  display: flex;
+  font-family: var(--font-family-base);
+  color: var(--color-font-white);
+line-height: 1.75;
+
+  &:not(:first-child)::before{
+    content: "/";
+    color: var(--color-font-white);
+    margin: 0 1em;
+  }
+}
+
+.footer-shop-info{
+  margin: 24px 0 64px;
+  text-align: center;
+  display: grid;
+  gap: 8px;
+}
+
+.footer-text {
+  font-family: var(--font-family-base);
+  color: var(--color-font-white);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.footer-copyright {
+  font-family: var(--font-family-base);
+  color: var(--color-font-white);
+  font-size: 12px;
+  line-height: 1;
+}
